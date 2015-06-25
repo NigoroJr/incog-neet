@@ -17,7 +17,10 @@ extension does, this extension basically allows you to...
         - However, this extension only _creates_ a new window, and doesn't
           open searches in a currently-existing incognito window.
 2. reopen a normal-window tab in an incognito window
-    * Same opening behavior as item 1.
+    * The tab will be positioned at the same index as what it was in the
+      original window.
+        - When moving the third tab from the left, it will be third from the
+          left in the new window.
     * This feature was inspired by [Incognito This Tab][2], but this extension
       had the same problem as Search Incognito.
 
