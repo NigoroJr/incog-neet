@@ -1,0 +1,10 @@
+{
+    "contextMenuSearch": {
+        "message": "Search Google for '%s' (Incognito)",
+        "description": "Message shown in the context menu"
+    },
+    "contextMenuMove": {
+        "message": "Move this tab",
+        "description": "Move this tab to a different window"
+    }
+}

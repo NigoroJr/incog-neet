@@ -1,0 +1,10 @@
+{
+    "contextMenuSearch": {
+        "message": "Googleで「%s」を検索 (シークレットモード)",
+        "description": "コンテキストメニューに表示されるメッセージ"
+    },
+    "contextMenuMove": {
+        "message": "このタブを移動する",
+        "description": "タブを別のウィンドウに移動する"
+    }
+}

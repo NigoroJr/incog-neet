@@ -1,0 +1,33 @@
+{
+    "name": "Incog-NEET",
+    "description": "Good stuff for incognito mode",
+    "homepage_url": "https://github.com/NigoroJr/incog-neet",
+    "version": "0.0.0",
+    "default_locale": "en",
+    "manifest_version": 2,
+
+    "icons": {
+        "128": "icons/icon128.png",
+        "48": "icons/icon48.png",
+        "16": "icons/icon16.png"
+    },
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "activeTab",
+        "windows"
+    ],
+
+    "incognito": "spanning",
+    "background": {
+        "scripts": ["js/search.js", "js/move.js"],
+        "persistent": false
+    },
+
+    "omnibox": {
+        "keyword": "i",
+        "icons": {
+            "16": "icons/icon16.png"
+        }
+    }
+}
