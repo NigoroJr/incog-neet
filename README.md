@@ -31,11 +31,12 @@ modifications to meet my needs. The source code was written from scratch.
 4. Select "Load unpacked extension"
 5. Select the directory that you cloned
 6. You need to check "Allow in incognito" in order for this extension to work
+7. Uncheck "Developer Mode"
 
 ## Limitations
 * The context menu (a.k.a. right click menu) does not update real-time.
     - This is due to the specifications of the API for Chrome extensions. Most
-      of the time, the title for the first tab in a window is used in the
+      of the time, the title of the first tab in the window is used for the
       context menu, but it may not always be correct.
 * You can _see_ the Google suggestions, but not _select_ them.
 
@@ -51,8 +52,8 @@ Creative Commons license (Attribution 3.0 Unported)-- is used for this
 extension. Thanks!
 
 ## License
-For the icons, see the link above. MIT License is adopted for the other source
-code parts of the extension.
+For the icons, see the link above. MIT License is adopted for the other parts
+of the extension.
 
 ## Author
 Naoki Mizuno
