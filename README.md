@@ -44,8 +44,6 @@ modifications to meet my needs. The source code was written from scratch.
 * You can _see_ the Google suggestions, but not _select_ them.
 
 ## TODO
-* Remove context menu in incognito window (since you can use the default
-  'Search Google for ...')
 * Configurable query URL, tab index
 * Simple save/load text files with URLs
 
