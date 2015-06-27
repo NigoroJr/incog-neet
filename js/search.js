@@ -73,7 +73,12 @@ function contextMenuSearchIncognito(info, currentTab) {
         return;
     }
 
-    searchTermInIncognito(textToSearch);
+    if (textToSearch.match(/^(https?|ftp):\/\/.+/)) {
+        openURLInIncognito(textToSearch);
+    }
+    else {
+        searchTermInIncognito(textToSearch);
+    }
 }
 
 /* Omnibox search in incognito */

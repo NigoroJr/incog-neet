@@ -27,6 +27,12 @@ extension does, this extension basically allows you to...
 In short, you can think of it as a mashup of those two plugins, with
 modifications to meet my needs. The source code was written from scratch.
 
+When selecting text that starts with `http://`, `https://`, or `ftp://`, this
+extension will open the selected URL in a new incognito tab. It's confusing
+because it still says "Search Google for...", but don't worry: it'll open the
+URL instead of searching for that text. This is due to the API limitation
+(unless there's a way that I don't know to get around this).
+
 ## Install
 1. Clone the repository
 2. Open Chrome/Chomium and go to extensions
