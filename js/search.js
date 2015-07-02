@@ -76,6 +76,10 @@ function contextMenuSearchIncognito(info, currentTab) {
     if (textToSearch.match(/^(https?|ftp):\/\/.+/)) {
         openURLInIncognito(textToSearch);
     }
+    else if (textToSearch.match(/[^\/]+\.(com|edu|org|(co\.)?jp)\/?/)) {
+        textToSearch = 'http://' + textToSearch;
+        openURLInIncognito(textToSearch);
+    }
     else {
         searchTermInIncognito(textToSearch);
     }
