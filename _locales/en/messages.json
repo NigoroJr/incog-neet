@@ -8,7 +8,7 @@
         "description": "Move this tab to a different window"
     },
     "reloadMenu": {
-        "message": "[Reload Menu Entry]",
+        "message": "[Refresh Window List]",
         "description": "Refresh the list of windows"
     }
 }

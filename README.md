@@ -44,9 +44,7 @@ URL instead of searching for that text. This is due to the API limitation
 
 ## Limitations
 * The context menu (a.k.a. right click menu) does not update real-time.
-    - This is due to the specifications of the API for Chrome extensions. Most
-      of the time, the title of the first tab in the window is used for the
-      context menu, but it may not always be correct.
+    - Click on `[Refresh Window List]`
 * You can _see_ the Google suggestions, but not _select_ them.
 
 ## TODO
