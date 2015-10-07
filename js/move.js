@@ -46,8 +46,7 @@ function contextMenuMove(info, currentTab) {
     });
 }
 
-/* Add context menu for moving tab */
-chrome.runtime.onInstalled.addListener(function () {
+var createMoveContextMenu = function () {
     /* Context menu */
     var contextMenuEntry = {
         'id': 'incog-neet#move',
@@ -71,6 +70,9 @@ chrome.runtime.onInstalled.addListener(function () {
             chrome.contextMenus.create(contextMenuEntry);
         }
     });
-});
+};
+
+/* Add context menu for moving tab */
+chrome.runtime.onInstalled.addListener(createMoveContextMenu);
 
 chrome.contextMenus.onClicked.addListener(contextMenuMove);
