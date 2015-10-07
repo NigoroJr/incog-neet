@@ -34,11 +34,12 @@ function moveTabToWindow(currentTab, windowId, incognito) {
 }
 
 function contextMenuMove(info, currentTab) {
-    var windowIdStr = info.menuItemId.replace('incog-neet#move#window', '');
     // Search Google for... was clicked
     if (!info.menuItemId.match(/^incog-neet#move/)) {
         return;
     }
+
+    var windowIdStr = info.menuItemId.replace('incog-neet#move#window', '');
     var windowId = parseInt(windowIdStr);
 
     chrome.windows.get(windowId, function (win) {
