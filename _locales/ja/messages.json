@@ -6,5 +6,9 @@
     "contextMenuMove": {
         "message": "このタブを移動する",
         "description": "タブを別のウィンドウに移動する"
+    },
+    "reloadMenu": {
+        "message": "[ウィンドウの一覧を更新する]",
+        "description": "ウィンドウのリストを更新する"
     }
 }

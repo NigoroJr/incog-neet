@@ -6,5 +6,9 @@
     "contextMenuMove": {
         "message": "Move this tab",
         "description": "Move this tab to a different window"
+    },
+    "reloadMenu": {
+        "message": "[Reload Menu Entry]",
+        "description": "Refresh the list of windows"
     }
 }

@@ -25,6 +25,9 @@ function moveTabToWindow(currentTab, windowId, incognito) {
     // Update the tabs list at the very list
     chrome.windows.getAll({'populate': true}, function (windows) {
         for (win of windows) {
+            if (typeof win.tabs[0] === 'undefined') {
+                continue;
+            }
             // Note: ID is important! See contextMenuMove()
             var id = 'incog-neet#move#window' + String(win.id);
             var firstTabTitle = win.tabs[0].title;
@@ -36,6 +39,13 @@ function moveTabToWindow(currentTab, windowId, incognito) {
 function contextMenuMove(info, currentTab) {
     // Search Google for... was clicked
     if (!info.menuItemId.match(/^incog-neet#move/)) {
+        return;
+    }
+
+    // Refresh the list of windows
+    if (info.menuItemId == 'incog-neet#move#reloadMenu') {
+        // Remove, then recreate the context menu in callback function
+        chrome.contextMenus.remove('incog-neet#move', createMoveContextMenu);
         return;
     }
 
@@ -58,6 +68,15 @@ var createMoveContextMenu = function () {
     };
     chrome.contextMenus.create(contextMenuEntry);
     chrome.windows.getAll({'populate': true}, function (windows) {
+        var reloadMenuEntry = {
+            'id': 'incog-neet#move#reloadMenu',
+            'parentId': 'incog-neet#move',
+            'title': chrome.i18n.getMessage('reloadMenu'),
+            'contexts': [
+                'page', 'link', 'image', 'video', 'audio',
+            ],
+        }
+        chrome.contextMenus.create(reloadMenuEntry);
         for (win of windows) {
             var firstTabTitle = win.tabs[0].title;
             var contextMenuEntry = {
